@@ -1,5 +1,5 @@
 {
   "author": "Wesley Banfield",
   "project_name": "Jupyter Gallery",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
 }
