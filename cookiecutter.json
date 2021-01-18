@@ -1,0 +1,6 @@
+{
+  "author": "Wesley Banfield",
+  "project_name": "Jupyter Gallery",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
+}
