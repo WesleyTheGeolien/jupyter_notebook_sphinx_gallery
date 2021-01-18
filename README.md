@@ -1,3 +1,5 @@
+# Jupyter Gallery generated from [WesleyTheGeolien's cookiecutter template](https://github.com/WesleyTheGeolien/jupyter_notebook_sphinx_gallery)
+
 # Notebook Gallery Demo gallery
 
 Inspired by [Project Pythia](https://github.com/ProjectPythia/projectpythia.github.io). This is a template repository to create a gallery of notebooks.
