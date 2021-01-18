@@ -15,9 +15,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import yaml
 
-with open('lorem_ipsum.txt') as fid:
-    descriptions = fid.read().split('\n\n')
-
 
 DOC_SRC = pathlib.Path(os.path.dirname(os.path.abspath(__file__))).parent
 default_img_loc = DOC_SRC / '_static/images/sphinx-logo.png'
@@ -73,7 +70,6 @@ class NotebookInfo:
             'title': self.extract_title(),
             'url': f'./{nb_id}.html',
             'id': nb_id,
-            'description': random.choice(descriptions)[:200].strip(),
         }
 
     def gen_preview(self):
@@ -135,8 +131,6 @@ def build_gallery(srcdir, gallery, contains_notebooks):
             :img-top: {entry["thumbnail"]}
             +++
             **{entry['title']}**
-
-            {entry['description'][:50]} ...
 
             {{ "{{" }}link-badge{{ "}}" }}`{entry["url"]},"rendered-notebook",cls=badge-secondary text-white float-left p-2 mr-1`
             """
