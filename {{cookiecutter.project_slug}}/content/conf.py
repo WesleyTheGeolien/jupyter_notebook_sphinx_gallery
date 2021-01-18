@@ -72,6 +72,3 @@ myst_admonition_enable = True
 myst_deflist_enable = True
 jupyter_execute_notebooks = 'off'
 
-# -------- CUSTOM SCRIPT -----------------------------------------------------
-# move index.md from gallery to here
-shutil.move('./notebooks_gallery/index.md', os.getcwd())

@@ -138,7 +138,7 @@ def build_gallery(srcdir, gallery, contains_notebooks):
 
             {entry['description'][:50]} ...
 
-            {{link-badge}}`{entry["url"]},"rendered-notebook",cls=badge-secondary text-white float-left p-2 mr-1`
+            {{ "{{" }}link-badge{{ "}}" }}`{entry["url"]},"rendered-notebook",cls=badge-secondary text-white float-left p-2 mr-1`
             """
 
             panels_body.append(x)
@@ -146,7 +146,7 @@ def build_gallery(srcdir, gallery, contains_notebooks):
         panels_body = '\n'.join(panels_body)
 
         gallery_content = f'''# {gallery.capitalize()} Gallery
-````{{panels}}
+````{{ "{{" }}panels{{ "}}" }}
 :container: full-width
 :column: text-left col-6 col-lg-4
 :card: +my-2
@@ -163,7 +163,7 @@ def build_gallery(srcdir, gallery, contains_notebooks):
 def main(app):
     for gallery in [('notebooks', True)]:
         build_gallery(app.builder.srcdir, gallery[0], gallery[1])
-
+    shutil.move(os.path.join(app.builder.srcdir, 'notebooks_gallery/index.md'), DOC_SRC)
 
 def setup(app):
     app.connect('builder-inited', main)
