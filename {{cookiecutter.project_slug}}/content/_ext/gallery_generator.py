@@ -65,7 +65,7 @@ class NotebookInfo:
 
         nb_id = f'{self.filepath.relative_to(self.src_dir).parent}/{self.filepath.stem}'
         self.info = {
-            'thumbnail': f'./{self.png_path.relative_to(self.src_dir).as_posix()}',
+            'thumbnail': f'./{self.png_path.relative_to(self.src_dir).as_posix()}'.replace(' ','\ '),
             'notebook': f'./{self.filepath.relative_to(self.src_dir).as_posix()}',
             'title': self.extract_title(),
             'url': f'./{nb_id}.html',
