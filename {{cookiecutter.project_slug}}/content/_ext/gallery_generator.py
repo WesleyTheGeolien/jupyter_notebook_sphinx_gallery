@@ -157,7 +157,7 @@ def build_gallery(srcdir, gallery, contains_notebooks):
 def main(app):
     for gallery in [('notebooks', True)]:
         build_gallery(app.builder.srcdir, gallery[0], gallery[1])
-    shutil.move(os.path.join(app.builder.srcdir, 'notebooks_gallery/index.md'), DOC_SRC)
+    shutil.move(os.path.join(app.builder.srcdir, 'notebooks_gallery/index.md'), os.path.join(DOC_SRC, 'index.md'))
 
 def setup(app):
     app.connect('builder-inited', main)
